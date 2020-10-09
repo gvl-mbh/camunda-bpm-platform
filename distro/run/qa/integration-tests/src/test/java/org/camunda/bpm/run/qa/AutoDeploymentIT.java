@@ -38,7 +38,6 @@ import org.camunda.bpm.model.bpmn.BpmnModelInstance;
 import org.camunda.bpm.run.qa.util.SpringBootManagedContainer;
 import org.junit.After;
 import org.junit.Test;
-
 import io.restassured.response.ExtractableResponse;
 import io.restassured.response.Response;
 
@@ -153,6 +152,7 @@ public class AutoDeploymentIT {
       assertThatResourceNameIsRelativePath(name);
     }
   }
+
 
   private List<String> extractResourceNames(Response response) {
     ExtractableResponse<Response> extract = response.then().extract();
